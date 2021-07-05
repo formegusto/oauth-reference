@@ -27,3 +27,36 @@
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.85);
 }
+
+.google-auth-btn {
+  display: flex;
+  align-items: center;
+
+  height: 50px;
+  width: 250px;
+  padding: 0 8px;
+  box-sizing: border-box;
+
+  background-color: #fff;
+  border: none;
+  border-radius: 12px;
+
+  box-shadow: 2px 2px 4px #ccc;
+  cursor: pointer;
+}
+.google-auth-btn > .symbol > img {
+  width: 18px;
+  height: 18px;
+}
+.google-auth-btn > .label {
+  flex: 1;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.apple-auth-btn {
+  width: 250px;
+
+  background-color: #000;
+}

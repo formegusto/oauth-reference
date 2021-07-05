@@ -1,12 +1,29 @@
 .kakao-auth-btn {
+  display: flex;
+  align-items: center;
+
   background-color: #fee500;
   border: none;
   border-radius: 12px;
 
-  height: 90px;
+  height: 50px;
   width: 250px;
+
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+
+  cursor: pointer;
 }
 .kakao-auth-btn > .symbol {
-  width: 30px;
-  height: 30px;
+  padding: 0 0.5rem;
+}
+.kakao-auth-btn > .symbol > img {
+  width: 17px;
+  height: 17px;
+}
+.kakao-auth-btn > .label {
+  padding: 0 0.5rem;
+  flex: 1;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.85);
 }

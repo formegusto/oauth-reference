@@ -1,7 +1,13 @@
 {% extends 'layout.html' %}
 
 {% block styles %}
+<!-- Common Button Style -->
 <link rel="stylesheet" href="styles/button.css" />
+
+<!-- Google Button Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -10,5 +16,11 @@
         <img src="assets/kakao/kakao_symbol.png" />
     </span>
     <span class="label">Login with Kakao</span>
+</button>
+<button class="google-auth-btn">
+    <span class="symbol">
+        <img src="assets/google/g-logo.png" />
+    </span>
+    <span class="label">Sign In with Google</span>
 </button>
 {% endblock %}

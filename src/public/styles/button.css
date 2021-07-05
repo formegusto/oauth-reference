@@ -1,18 +1,28 @@
-.kakao-auth-btn {
+button {
   display: flex;
   align-items: center;
 
-  background-color: #fee500;
   border: none;
   border-radius: 12px;
 
-  height: 50px;
   width: 250px;
-
-  padding: 0 0.5rem;
-  box-sizing: border-box;
-
+  height: 50px;
   cursor: pointer;
+
+  box-sizing: border-box;
+}
+button:hover {
+  opacity: 0.7;
+}
+
+.label {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.kakao-auth-btn {
+  background-color: #fee500;
+  padding: 0 0.5rem;
 }
 .kakao-auth-btn > .symbol {
   padding: 0 0.5rem;
@@ -23,40 +33,61 @@
 }
 .kakao-auth-btn > .label {
   padding: 0 0.5rem;
-  flex: 1;
-  font-size: 1rem;
   color: rgba(0, 0, 0, 0.85);
 }
 
 .google-auth-btn {
-  display: flex;
-  align-items: center;
-
-  height: 50px;
-  width: 250px;
-  padding: 0 8px;
-  box-sizing: border-box;
-
+  padding: 0 0.5rem;
   background-color: #fff;
-  border: none;
-  border-radius: 12px;
 
   box-shadow: 2px 2px 4px #ccc;
-  cursor: pointer;
+}
+.google-auth-btn > .symbol {
+  padding: 0 0.5rem;
 }
 .google-auth-btn > .symbol > img {
   width: 18px;
   height: 18px;
 }
 .google-auth-btn > .label {
-  flex: 1;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
   color: rgba(0, 0, 0, 0.54);
 }
 
 .apple-auth-btn {
-  width: 250px;
-
   background-color: #000;
+}
+.apple-auth-btn > .symbol > img {
+  width: 40px;
+  height: 40px;
+}
+.apple-auth-btn > .label {
+  color: #fff;
+}
+
+.naver-auth-btn {
+  background-color: #03c75a;
+  overflow: hidden;
+}
+.naver-auth-btn > .symbol > img {
+  width: 40px;
+  height: 40px;
+}
+.naver-auth-btn > .label {
+  color: #fff;
+}
+
+.facebook-auth-btn {
+  background-color: #3379ea;
+  padding: 0 0.5rem;
+}
+.facebook-auth-btn > .symbol {
+  padding: 0 0.5rem;
+}
+.facebook-auth-btn > .symbol > img {
+  width: 18px;
+  height: 18px;
+}
+.facebook-auth-btn > .label {
+  color: #fff;
 }

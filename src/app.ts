@@ -19,6 +19,7 @@ nunjucks.configure("src/views", {
 
 /* MiddleWare Config */
 app.use(morgan("dev"));
+app.use("/assets", express.static(path.join(__dirname, "/public/assets")));
 app.use("/styles", express.static(path.join(__dirname, "/public/styles")));
 
 /* Route */

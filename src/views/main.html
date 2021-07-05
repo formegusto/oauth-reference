@@ -1,5 +1,14 @@
 {% extends 'layout.html' %}
 
+{% block styles %}
+<link rel="stylesheet" href="styles/button.css" />
+{% endblock %}
+
 {% block content %}
-main
+<button class="kakao-auth-btn">
+    <span class="symbol">
+        <img src="assets/kakao/kakao_symbol.png" />
+    </span>
+    <span class="label">Login with Kakao</span>
+</button>
 {% endblock %}

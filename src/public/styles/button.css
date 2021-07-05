@@ -1,0 +1,12 @@
+.kakao-auth-btn {
+  background-color: #fee500;
+  border: none;
+  border-radius: 12px;
+
+  height: 90px;
+  width: 250px;
+}
+.kakao-auth-btn > .symbol {
+  width: 30px;
+  height: 30px;
+}

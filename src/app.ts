@@ -3,8 +3,16 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import nunjucks from "nunjucks";
 import path from "path";
+import http from "http";
+import https from "https";
+import fs from "fs";
 
 dotenv.config();
+
+const cert = {
+  key: fs.readFileSync(path.join(__dirname, "/cert/localhost.key")),
+  cert: fs.readFileSync(path.join(__dirname, "/cert/localhost.crt")),
+};
 
 /* Basic Config */
 const app = express();
@@ -26,6 +34,6 @@ app.use("/styles", express.static(path.join(__dirname, "/public/styles")));
 import pageRouter from "./routes/page";
 app.use("/", pageRouter);
 
-app.listen(app.get("port"), () => {
+https.createServer(cert, app).listen(app.get("port"), () => {
   console.log(app.get("port"), "Open!");
 });

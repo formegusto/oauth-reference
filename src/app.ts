@@ -1,14 +1,30 @@
-import * as express from "express";
+import express from "express";
+import dotenv from "dotenv";
+import morgan from "morgan";
+import nunjucks from "nunjucks";
+import path from "path";
 
+dotenv.config();
+
+/* Basic Config */
 const app = express();
+app.set("port", process.env.PORT || 80);
+app.set("view engine", "html");
 
-app.get(
-  "/",
-  (req: express.Request, res: express.Response, next: express.NextFunction) => {
-    res.send("Oauth Reference");
-  }
-);
+/* Nunjucks Config */
+nunjucks.configure("src/views", {
+  express: app,
+  watch: true,
+});
 
-app.listen(3000, () => {
-  console.log("3000번 포트 오픈");
+/* MiddleWare Config */
+app.use(morgan("dev"));
+app.use("/styles", express.static(path.join(__dirname, "/public/styles")));
+
+/* Route */
+import pageRouter from "./routes/page";
+app.use("/", pageRouter);
+
+app.listen(app.get("port"), () => {
+  console.log(app.get("port"), "Open!");
 });

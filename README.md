@@ -2,7 +2,7 @@
 
 # 1. Why OAuth(Open Standard Authentication)?
 
-![OAuth%20Reference%20c4ed5ed1aeca49e193437d293170c7fe/Untitled.png](OAuth%20Reference%20c4ed5ed1aeca49e193437d293170c7fe/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/52296323/124593418-95d41980-de99-11eb-9db1-8010c10307a2.png)
 
 - 몇 년사이 Open API의 생태계는 제공범위, 활용도 등 여러가지 방면에서 많은 발전을 이루면서 성장하는 중이다. 이러한 성장 속 에서 대부분의 웹 서비스에서 필수적으로 사용되고 있는 OAuth의 사용법과 활용법을 정리해놓으려고 한다.
 - passport library의 활용법과 백엔드의 인증 처리 방식을 정확하게 익히기 위함이기도 하다.
